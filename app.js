@@ -5,6 +5,8 @@ const port = 3000;
 
 //https://medium.com/@mottammal1993/building-a-simple-web-app-with-ejs-axios-and-express-js-263ade0467c7
 
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
@@ -18,6 +20,7 @@ app.post('/results', (req, res) => {
     axios.get(`https://v2.jokeapi.dev/joke/Any?contains=${word}`)
         .then(response => {
 
+            // I hate Javascript bugs
             console.log(response.data);
 
             const joke = response.data.type === 'single'

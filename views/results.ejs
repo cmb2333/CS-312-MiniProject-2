@@ -2,10 +2,17 @@
 <html>
 <head>
   <title>Your Joke</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Heres your joke:</h1>
-  <p><%= joke %></p>
-  <a href="/">Get Another Joke</a>
+  <div class="container">
+    <h1>Your Joke</h1>
+    <div class="joke">
+      <p><%= joke %></p>
+    </div>
+    <a href="/" class="button">Try Another Word</a>
+  </div>
 </body>
 </html>
+
